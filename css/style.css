@@ -236,8 +236,9 @@ footer {
 	right: 0;
 	top:100px;
 	border-radius: 50%;
+	border: 1px solid orange;
 	background: #111111;
-	transition: all 0.7s ease-out;
+	transition: background 0.7s ease-out;
 }
 
 .blackStyle:hover {
@@ -384,6 +385,10 @@ footer {
 
 @media screen and (max-width: 1100px){
 
+	.bgContent {
+		height: 2300px;
+	}
+
 	.aboutMe {
 		display: block;
 	}
@@ -421,6 +426,11 @@ footer {
 		/*position: fixed;*/
 		right: 20px;
 		top: 20px;
+	}
+
+	.skilS p {
+		font-size: 18px;
+		margin-top:0;
 	}
 
 	.mobT {
