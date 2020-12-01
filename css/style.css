@@ -577,6 +577,15 @@ footer {
 		overflow: hidden;
 		text-align: justify;
 		border-bottom: 1px solid black;
+		/*transition: height 1s ease-out;*/
+	}
+
+	.skilS.mobile_tab {
+		height: auto;
+	}
+
+	.skilS.skilS_anim.mobile_tab {
+		height: auto;
 	}
 
 	.skilS p {

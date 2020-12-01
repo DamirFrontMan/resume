@@ -137,6 +137,27 @@ function ready() {
 		}
 	}
 
+	function mobilskilS () {
+		var mb_tab = document.querySelector('.skilS');
+		if (mb_tab.classList.contains('mobile_tab')) {
+			mb_tab.classList.remove('mobile_tab');
+		}else {
+			mb_tab.classList.add('mobile_tab');
+		}
+
+	}
+
+	function mobilskilS_anim () {
+		var mb_tab = document.querySelector('.skilS_anim');
+		if (mb_tab.classList.contains('mobile_tab')) {
+			mb_tab.classList.remove('mobile_tab');
+		}else {
+			mb_tab.classList.add('mobile_tab');
+		}
+	}
+
+	document.querySelector('.mySkills').addEventListener('click', mobilskilS);
+	document.querySelector('.secS').addEventListener('click', mobilskilS_anim);
 	document.querySelector(".content__button_black-theme").addEventListener("click", blackMobile);
 	document.querySelector(".blackStyle").addEventListener("click", blackS);
 	window.addEventListener('scroll', skrF);
