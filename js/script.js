@@ -102,6 +102,8 @@ function ready() {
     			f_ico[i].classList.remove('active');
     		}
 
+    		document.querySelector('.skilS').style.borderBottom = '1px solid black'
+    		document.querySelector('.skilS_anim').style.borderBottom = '1px solid black'
 			document.body.style.color = 'black';
 			document.body.classList.remove('active');
 			btn.classList.remove('active');
@@ -123,6 +125,8 @@ function ready() {
     			f_ico[i].classList.add('active');
     		}
 
+    		document.querySelector('.skilS').style.borderBottom = '1px solid white'
+    		document.querySelector('.skilS_anim').style.borderBottom = '1px solid white'
 			document.body.style.color = 'white';
 			document.body.classList.add('active');
 			btn.classList.add('active');

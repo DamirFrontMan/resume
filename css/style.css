@@ -458,29 +458,45 @@ footer {
 
 @media screen and (max-width: 710px){
 
+	.conteiner {
+		height: auto;
+		transition: none;
+	}
+
 	.myImg img {
-		width: 285px;
-		height: 285px;
-		margin:0 0 0 63px;
+		display: none;
 	}
 
 	.content {
-		width: 300px;
+		width: 100%;
+	}
+
+	.content__about-me {
+		transform: translate(0,0);
+		transition: none;
 	}
 
 	.myImg {
-		width: 300px; /*800px*/
+		padding: 0;
+		width: 95%; /*800px*/
+		display: block;
+		margin:0 auto;
+		background: url('../img/my_photo.jpg') no-repeat;
+		background-size: 100%;
+	}
+
+	.mobil-photo_sizing {
+		height: 87vw;
 	}
 
 	.myTxt {
 		/*margin:50px auto;*/
-		width: 285px; /*800px*/
+		width: 95%; /*800px*/
+		height: auto;
 	}
 
 	.myTxtSec {
-		margin-top:180px;
-		width: 285px;
-		font-size: 12px;
+		display: none;
 	}
 
 	.mobV {
@@ -489,15 +505,32 @@ footer {
 
 	.content__button_black-theme {
 		height: 45px;
+		font-size: 7vw;
 	}
 
 	.content__button_black-theme:after {
 		content: 'Темная тема'
 	}
 
-	.skilS p {
-		font-size: 18px;
-		margin-top:0;
+	.mobil-sizing {
+		height: 140vw;
+	}
+
+	.myTxt .dIv .h1 {
+		text-align: left;
+		font-size: 10vw;
+	}
+
+	.myTxt .dIv h1 {
+		text-align: left;
+		font-size: 20vw;
+		line-height: 0.8;
+		color: orange;
+	}
+
+	.myTxt .dIv .footTxt {
+		line-height: 4;
+		font-size: 4.4vw;
 	}
 
 	.myTxt .dIv span {
@@ -508,8 +541,7 @@ footer {
 	footer {
 		display: flex;
 		margin:0 auto;
-		width: 300px;
-		border: 1px solid black;
+		width: 100%;
 	}
 
 	footer .f-ico {
@@ -517,5 +549,76 @@ footer {
 		height: 40px;
 	}
 
+	.mySkills {
+		width: 100%;
+		display: block;
+		height: auto;
+		opacity: 1;
+		transform: translate(0,0);
+		transition: none;
+	}
+
+	.titT {
+		width: 100%;
+		height: 18vw;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+	}
+
+	.titT p {
+		font-size: 7vw;
+		margin-top:0;
+	}
+
+	.skilS {
+		width: 100%;
+		height: 0; /*auto */
+		overflow: hidden;
+		text-align: justify;
+		border-bottom: 1px solid black;
+	}
+
+	.skilS p {
+		font-size: 18px;
+		margin-top:0;
+	}
+
+	.secS {
+		margin: 10px 0 20px 0;
+	}
+
+	.secS .titT {
+		height: 18vw;
+	}
+
+	.secS .titT p {
+		margin-top:0;
+	}
+
+	.skilS_anim {
+		overflow: hidden;
+		height: 0; /*auto*/
+		transform: translate(0,0);
+		border-bottom: 1px solid black;
+		transition: none;
+	} 
+
+	.skilS .vertB .opis p{
+		font-size: 25px;
+	}
+
+}
+
+
+@media screen and (max-width: 320px){
+	.skilS .vertB .numb {
+		overflow: hidden;
+		width: 0;
+	}
+
+	.skilS .vertB .opis {
+		width: 100%;
+	}
 
 }
