@@ -30,13 +30,12 @@ function ready() {
 	function blackS(){
 		var btn = document.querySelector(".blackStyle");
 		var btnMob = document.querySelector(".content__button_black-theme");
-		var obj = document.querySelector(".conteiner");
 		var tit = document.querySelectorAll(".titT");
 		var ico = document.querySelectorAll('.ico');
 		var f_ico = document.querySelectorAll('.f-ico');
 		var foot = document.querySelector('.footer');
 
-		if(obj.classList.contains('active')){
+		if(document.body.classList.contains('active')){
 			for (var i = 0.; i < tit.length; i++) {
     			tit[i].classList.remove('active');
     		}
@@ -52,7 +51,6 @@ function ready() {
     		btnMob.classList.remove('active');
     		btn.title = 'Темная тема';
     		btn.classList.remove('active');
-        	obj.classList.remove('active');
         	document.getElementById('spn').style.background = 'black';
         	document.body.style.color = 'black';
         	document.body.classList.remove('active');
@@ -78,7 +76,6 @@ function ready() {
     		document.body.style.color = 'white';
     		document.body.classList.add('active');
     		document.getElementById("blC").style.color = 'white';
-        	obj.classList.add('active');
         	foot.classList.add('active');
     	}
 	}
@@ -86,7 +83,6 @@ function ready() {
 	function blackMobile() {
 		var btn = document.querySelector(".blackStyle");
 		var btnMob = document.querySelector(".content__button_black-theme");
-		var obj = document.querySelector(".conteiner");
 		var tit = document.querySelectorAll(".titT");
 		var foot = document.querySelector('.footer');
 		var f_ico = document.querySelectorAll('.f-ico');
@@ -109,7 +105,6 @@ function ready() {
 			document.body.style.color = 'black';
 			document.body.classList.remove('active');
 			btn.classList.remove('active');
-			obj.classList.remove('active');
 			btnMob.classList.remove('active');
 			document.getElementById('spn').style.background = 'black';
 			document.getElementById("blC").style.color = 'black';
@@ -131,7 +126,6 @@ function ready() {
 			document.body.style.color = 'white';
 			document.body.classList.add('active');
 			btn.classList.add('active');
-			obj.classList.add('active');
 			btnMob.classList.add('active');
 			document.getElementById('spn').style.background = 'white';
 			document.getElementById("blC").style.color = '#00afc9';
