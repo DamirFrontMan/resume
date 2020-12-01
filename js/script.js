@@ -55,6 +55,7 @@ function ready() {
         	obj.classList.remove('active');
         	document.getElementById('spn').style.background = 'black';
         	document.body.style.color = 'black';
+        	document.body.classList.remove('active');
     		document.getElementById("blC").style.color = 'black';
     		foot.classList.remove('active');
     	}else {
@@ -75,6 +76,7 @@ function ready() {
     		btn.classList.add('active');
     		document.getElementById('spn').style.background = 'white';
     		document.body.style.color = 'white';
+    		document.body.classList.add('active');
     		document.getElementById("blC").style.color = 'white';
         	obj.classList.add('active');
         	foot.classList.add('active');
@@ -105,6 +107,7 @@ function ready() {
     		}
 
 			document.body.style.color = 'black';
+			document.body.classList.remove('active');
 			btn.classList.remove('active');
 			obj.classList.remove('active');
 			btnMob.classList.remove('active');
@@ -126,6 +129,7 @@ function ready() {
     		}
 
 			document.body.style.color = 'white';
+			document.body.classList.add('active');
 			btn.classList.add('active');
 			obj.classList.add('active');
 			btnMob.classList.add('active');

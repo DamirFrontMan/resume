@@ -15,7 +15,13 @@
 body {
 	color: black;
 	font-family: 'Oswald', sans-serif;
+	background: #fefefe;
 }
+
+body.active {
+	background: #111111;
+}
+
 
 a{
 	text-decoration: none;
@@ -432,7 +438,6 @@ footer {
 		width: 95%;
 		height: 60px;
 		margin:30px auto 0 auto;
-		border: 1px solid black;
 		color: white;
 		font-size: 30px;
 		background: #111111;
@@ -470,6 +475,7 @@ footer {
 
 	footer {
 		display: flex;
+		width: 700px;
 		justify-content:space-around;
 		background: #fefefe;
 	}
@@ -483,5 +489,6 @@ footer {
 	}
 
 }
+
 
 
