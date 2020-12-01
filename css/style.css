@@ -34,17 +34,17 @@ a:hover {
 }*/
 
 footer {
-	display: block;
+	display: none;
 }
 
-.bgContent {
+.conteiner {
 	width: 100%;
 	/*border:1px solid black;*/
 	height: 2000px;
 	background:#fefefe; /*#111111;*/ /*Темная тема*/
 }
 
-.bgContent.active {
+.conteiner.active {
 	background:#111111;
 }
 
@@ -98,21 +98,21 @@ footer {
 
 .skilS .vertB .numb {
 	width: 20%;
-	padding-left: 7%;
 	line-height: 250px;
 	color: orange;
 	font-size: 30px;
+	justify-content:center;
 }
 
 .skilS .vertB .opis {
 	width: 80%;
-	display: inline-block;
+	display: flex;
+	justify-content:center;
+	align-items: center;
 }
 
 .skilS .vertB .opis p{
 	text-align: center;
-	margin-top:100px;
-	/*line-height: 220px;*/
 	font-size: 30px;
 }
 
@@ -165,7 +165,7 @@ footer {
 	margin-left:55px;
 }
 
-.aboutMe {
+.content__about-me {
 	position: relative;
 	/*top:100px;*/
 	display: flex;
@@ -177,7 +177,7 @@ footer {
 	opacity: 0;
 }
 
-.aboutMe.active {
+.content__about-me.active {
 	opacity: 1;
 	transform: translate(0,0);
 }
@@ -197,7 +197,7 @@ footer {
 	transform:translate(0,-10px);
 }
 
-.flexStyle {
+.flex-style {
 	display: flex;
 	justify-content: space-around;
 }
@@ -330,12 +330,12 @@ footer {
 	display: block;
 	height: 2px;
 	background: black;
-	margin:200px 0;
+	margin:250px 0;
 }
 
 @media screen and (max-width: 1620px){
 
-	.bgContent {
+	.conteiner {
 		width: 100%;
 	}
 
@@ -362,7 +362,7 @@ footer {
 
 @media screen and (max-width: 1300px){
 
-	.bgContent {
+	.conteiner {
 		width: 100%;
 	}
 
@@ -385,17 +385,18 @@ footer {
 
 @media screen and (max-width: 1100px){
 
-	.bgContent {
+	.conteiner {
 		height: 2300px;
 	}
 
-	.aboutMe {
+	.content__about-me {
 		display: block;
 	}
 
 	.myImg img {
 		width: 512px;
 		height: 512px;
+		border-radius: 0;
 		margin: 0 0 0 145px;
 	}
 
@@ -410,12 +411,13 @@ footer {
 	}
 
 	.myTxt {
-		width: 700px; /*800px*/
+		margin:50px auto;
+		width: 665px; /*800px*/
 	}
 
 	.myTxtSec {
-		margin-top:500px;
-		width: 700px;
+		margin-top:450px;
+		width: 665px;
 	}
 
 	.mobV {
@@ -423,9 +425,29 @@ footer {
 	}
 
 	.blackStyle {
-		/*position: fixed;*/
-		right: 20px;
-		top: 20px;
+		display: none;
+	}
+
+	.content__button_black-theme {
+		width: 95%;
+		height: 60px;
+		margin:30px auto 0 auto;
+		border: 1px solid black;
+		color: white;
+		font-size: 30px;
+		background: #111111;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+	}
+
+	.content__button_black-theme.active {
+		background: #fefefe;
+		color: black;
+	}
+
+	.content__button_black-theme:after {
+		content: 'Темная тема'
 	}
 
 	.skilS p {
@@ -436,6 +458,30 @@ footer {
 	.mobT {
 		display: none;
 	}
+
+	.myTxt .dIv span {
+		width: 100%;
+		margin:100px auto;
+	}
+
+	.myTxt .acc {
+		display: none;
+	}
+
+	footer {
+		display: flex;
+		justify-content:space-around;
+		background: #fefefe;
+	}
+
+	.footer.active {
+		background: #111111;
+	}
+
+	footer .f-ico.active {
+		filter: invert(100%);
+	}
+
 }
 
 
