@@ -46,6 +46,46 @@ footer {
 	margin:0 auto;
 }
 
+.content .content__title {
+	width: 100%;
+	margin-top: 100px;
+	padding: 20px 0;
+	display: flex;
+	font-size: 6vw;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid black;
+	opacity: 0.9;
+}
+
+.content .content__title.active {
+	background: #1f1f1f;
+	border-bottom: 1px solid white;
+}
+
+.content .slide {
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+
+.slide .slide__content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5vw;
+	transition: opacity 1s ease-out;
+}
+
+.slide .slide__content.active {
+	opacity: 1;
+}
+
 .mySkills {
 	width: 100%;
 	display: flex;
@@ -359,7 +399,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1100px){
+/*@media screen and (max-width: 1100px){
 
 	.conteiner {
 		height: 2300px;
@@ -381,14 +421,14 @@ footer {
 	}
 
 	.myImg {
-		width: 700px; /*800px*/
+		width: 700px;
 		padding: 0;
 		display: flex;
 	}
 
 	.myTxt {
 		margin:50px auto;
-		width: 665px; /*800px*/
+		width: 665px;
 	}
 
 	.myTxtSec {
@@ -420,10 +460,6 @@ footer {
 		background: #fefefe;
 		color: black;
 	}
-
-	/*.content__button_black-theme:after {
-		content: 'Темная тема'
-	}*/
 
 	.skilS p {
 		font-size: 18px;
@@ -459,9 +495,33 @@ footer {
 		filter: invert(100%);
 	}
 
-}
+}*/
 
 @media screen and (max-width: 710px){
+
+	.content .content__title {
+		margin-top: -10px;
+	}
+
+	.content .slide {
+		width: 100%;
+		height: auto;
+		padding: 100px 0;
+		position: relative;
+	}
+
+	.blackStyle {
+		display: none;
+	}
+
+
+	.mobT {
+		display: none;
+	}
+
+	.myTxt .acc {
+		display: none;
+	}
 
 	.conteiner {
 		height: auto;
@@ -477,6 +537,7 @@ footer {
 	}
 
 	.content__about-me {
+		display: block;
 		transform: translate(0,0);
 		transition: none;
 	}
@@ -504,7 +565,7 @@ footer {
 	}
 
 	.myTxt {
-		/*margin:50px auto;*/
+		margin:50px auto;
 		width: 95%; /*800px*/
 		height: auto;
 	}
@@ -518,8 +579,20 @@ footer {
 	}
 
 	.content__button_black-theme {
+		width: 95%;
 		height: 50px;
+		margin:30px auto 0 auto;
+		color: white;
 		font-size: 6vw;
+		background: #111111;
+		display: flex;
+		align-items: center;
+		justify-content:center;	
+	}
+
+	.content__button_black-theme.active {
+		background: #fefefe;
+		color: black;
 	}
 
 	.mobil-sizing {
@@ -551,12 +624,22 @@ footer {
 	footer {
 		display: flex;
 		margin:0 auto;
+		padding: 10px 0;
+		justify-content:space-around;
+		background: #fefefe;
 		width: 100%;
 	}
 
 	footer .f-ico {
-		width: 40px;
-		height: 40px;
+		width: 7vw;
+	}
+
+	footer .f-ico.active {
+		filter: invert(100%);
+	}
+
+	.footer.active {
+		background: #111111;
 	}
 
 	.mySkills {

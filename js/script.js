@@ -34,6 +34,7 @@ function ready() {
 		var ico = document.querySelectorAll('.ico');
 		var f_ico = document.querySelectorAll('.f-ico');
 		var foot = document.querySelector('.footer');
+		var slider = document.querySelector('.content__title');
 
 		if(document.body.classList.contains('active')){
 			for (var i = 0.; i < tit.length; i++) {
@@ -56,6 +57,7 @@ function ready() {
         	document.body.classList.remove('active');
     		document.getElementById("blC").style.color = 'orange';
     		foot.classList.remove('active');
+    		slider.classList.remove('active');
     	}else {
     		for (var i = 0.; i < tit.length; i++) {
     			tit[i].classList.add('active');
@@ -77,6 +79,7 @@ function ready() {
     		document.body.classList.add('active');
     		document.getElementById("blC").style.color = '#00afc9';
         	foot.classList.add('active');
+        	slider.classList.add('active');
     	}
 	}
 
@@ -88,6 +91,7 @@ function ready() {
 		var f_ico = document.querySelectorAll('.f-ico');
 		var ico = document.querySelectorAll('.ico');
 		var mob_white_border = document.querySelectorAll('.skilS');
+		var slider = document.querySelector('.content__title');
 
 		if (btnMob.classList.contains('active')) {
 
@@ -107,6 +111,7 @@ function ready() {
     			mob_white_border[i].classList.remove('white-border');
     		}
 
+    		slider.classList.remove('active');
     		document.getElementById("bl-theme").innerHTML="Темная тема";
 			document.body.style.color = 'black';
 			document.body.classList.remove('active');
@@ -133,7 +138,7 @@ function ready() {
     			mob_white_border[i].classList.add('white-border');
     		}
 
-
+    		slider.classList.add('active');
     		document.getElementById("bl-theme").innerHTML="Светлая тема";
 			document.body.style.color = 'white';
 			document.body.classList.add('active');
@@ -163,6 +168,42 @@ function ready() {
 			mb_tab.classList.add('mobile_tab');
 		}
 	}
+
+	var step = 1;
+	var ofset = 0;
+
+	var el = document.querySelectorAll('.slide__content');
+	el[0].classList.add('active');
+
+	function draw_left () {
+		
+		if (ofset == el.length) {
+			el[ofset - 1].classList.remove('active');
+			el[0].classList.add('active');
+			ofset = 0;
+		}else {
+			if (step != el.length) {
+			el[step].classList.add('active');
+
+			if (step > 0) {
+				el[step - 1].classList.remove('active');
+				// el[step -1].classList.add('left_active');
+			}
+
+			if (step + 1 == el.length) {
+				// el[step].classList.remove('active');
+				ofset = step + 1;
+				step = 1;
+			}else {
+				step ++;
+			}
+			}
+		}	
+	}
+
+	setInterval(draw_left, 2300);
+
+	// document.querySelector('.content__title').addEventListener('click', draw_left);
 
 	document.getElementById("bl-theme").innerHTML="Темная тема";
 
