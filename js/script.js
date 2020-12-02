@@ -54,7 +54,7 @@ function ready() {
         	document.getElementById('spn').style.background = 'black';
         	document.body.style.color = 'black';
         	document.body.classList.remove('active');
-    		document.getElementById("blC").style.color = 'black';
+    		document.getElementById("blC").style.color = 'orange';
     		foot.classList.remove('active');
     	}else {
     		for (var i = 0.; i < tit.length; i++) {
@@ -75,7 +75,7 @@ function ready() {
     		document.getElementById('spn').style.background = 'white';
     		document.body.style.color = 'white';
     		document.body.classList.add('active');
-    		document.getElementById("blC").style.color = 'white';
+    		document.getElementById("blC").style.color = '#00afc9';
         	foot.classList.add('active');
     	}
 	}
@@ -87,6 +87,7 @@ function ready() {
 		var foot = document.querySelector('.footer');
 		var f_ico = document.querySelectorAll('.f-ico');
 		var ico = document.querySelectorAll('.ico');
+		var mob_white_border = document.querySelectorAll('.skilS');
 
 		if (btnMob.classList.contains('active')) {
 
@@ -102,14 +103,17 @@ function ready() {
     			f_ico[i].classList.remove('active');
     		}
 
-    		document.querySelector('.skilS').style.borderBottom = '1px solid black'
-    		document.querySelector('.skilS_anim').style.borderBottom = '1px solid black'
+    		for (var i = 0; i < mob_white_border.length; i++) {
+    			mob_white_border[i].classList.remove('white-border');
+    		}
+
+    		document.getElementById("bl-theme").innerHTML="Темная тема";
 			document.body.style.color = 'black';
 			document.body.classList.remove('active');
 			btn.classList.remove('active');
 			btnMob.classList.remove('active');
 			document.getElementById('spn').style.background = 'black';
-			document.getElementById("blC").style.color = 'black';
+			document.getElementById("blC").style.color = 'orange';
 			foot.classList.remove('active');
 		}else {
 
@@ -125,8 +129,12 @@ function ready() {
     			f_ico[i].classList.add('active');
     		}
 
-    		document.querySelector('.skilS').style.borderBottom = '1px solid white'
-    		document.querySelector('.skilS_anim').style.borderBottom = '1px solid white'
+    		for (var i = 0; i < mob_white_border.length; i++) {
+    			mob_white_border[i].classList.add('white-border');
+    		}
+
+
+    		document.getElementById("bl-theme").innerHTML="Светлая тема";
 			document.body.style.color = 'white';
 			document.body.classList.add('active');
 			btn.classList.add('active');
@@ -155,6 +163,8 @@ function ready() {
 			mb_tab.classList.add('mobile_tab');
 		}
 	}
+
+	document.getElementById("bl-theme").innerHTML="Темная тема";
 
 	document.querySelector('.mySkills').addEventListener('click', mobilskilS);
 	document.querySelector('.secS').addEventListener('click', mobilskilS_anim);

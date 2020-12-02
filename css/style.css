@@ -25,7 +25,7 @@ body.active {
 
 a{
 	text-decoration: none;
-	color: black;
+	color: orange;
 }
 
 a:hover {
@@ -129,6 +129,7 @@ footer {
 .skilS {
 	width: 60%;
 	letter-spacing: 1.3px;
+	border:hidden;
 }
 
 .skilS_anim {
@@ -204,6 +205,10 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-around;
+}
+
+.content__button_black-theme {
+	display: none;
 }
 
 .blackStyle {
@@ -416,9 +421,9 @@ footer {
 		color: black;
 	}
 
-	.content__button_black-theme:after {
+	/*.content__button_black-theme:after {
 		content: 'Темная тема'
-	}
+	}*/
 
 	.skilS p {
 		font-size: 18px;
@@ -489,6 +494,15 @@ footer {
 		height: 87vw;
 	}
 
+	.skilS .vertB .numb {
+		overflow: hidden;
+		width: 0;
+	}
+
+	.skilS .vertB .opis {
+		width: 100%;
+	}
+
 	.myTxt {
 		/*margin:50px auto;*/
 		width: 95%; /*800px*/
@@ -504,12 +518,8 @@ footer {
 	}
 
 	.content__button_black-theme {
-		height: 45px;
-		font-size: 7vw;
-	}
-
-	.content__button_black-theme:after {
-		content: 'Темная тема'
+		height: 50px;
+		font-size: 6vw;
 	}
 
 	.mobil-sizing {
@@ -577,19 +587,35 @@ footer {
 		overflow: hidden;
 		text-align: justify;
 		border-bottom: 1px solid black;
-		/*transition: height 1s ease-out;*/
+		transition: height 0.6s ease-out;
 	}
 
+	.skilS_anim {
+		overflow: hidden;
+		height: 0; /*auto*/
+		transform: translate(0,0);
+		border-bottom: 1px solid black;
+		transition: height 0.6s ease-out;
+	} 
+
 	.skilS.mobile_tab {
-		height: auto;
+		height: 350px;
 	}
 
 	.skilS.skilS_anim.mobile_tab {
-		height: auto;
+		height: 350px;
+	}
+
+	.skilS.white-border {
+		border-bottom: 1px solid white;
+	}
+
+	.skilS.skilS_anim.white-border {
+		border-bottom: 1px solid white;
 	}
 
 	.skilS p {
-		font-size: 18px;
+		font-size: 25px;
 		margin-top:0;
 	}
 
@@ -605,29 +631,80 @@ footer {
 		margin-top:0;
 	}
 
-	.skilS_anim {
-		overflow: hidden;
-		height: 0; /*auto*/
-		transform: translate(0,0);
-		border-bottom: 1px solid black;
-		transition: none;
-	} 
-
 	.skilS .vertB .opis p{
 		font-size: 25px;
 	}
 
 }
 
+@media screen and (max-width: 590px){
+	.skilS.mobile_tab {
+		height: 320px;
+	}
+
+	.skilS p {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 535px){
+	.skilS.mobile_tab {
+		height: 300px;
+	}
+
+	.skilS p {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 485px){
+	.skilS.mobile_tab {
+		height: 340px;
+	}
+}
+
+@media screen and (max-width: 410px){
+	.skilS.mobile_tab {
+		height: 340px;
+	}
+
+	.skilS p {
+		font-size: 18px;
+	}
+
+	.skilS .vertB .opis p{
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 350px){
+	.skilS.mobile_tab {
+		height: 340px;
+	}
+
+	.skilS p {
+		font-size: 16.7px;
+	}
+}
 
 @media screen and (max-width: 320px){
-	.skilS .vertB .numb {
-		overflow: hidden;
-		width: 0;
+
+	.skilS.mobile_tab {
+		height: 360px;
 	}
 
-	.skilS .vertB .opis {
-		width: 100%;
+	.skilS p {
+		font-size: 16.5px;
 	}
 
+}
+
+@media screen and (max-width: 280px){
+	.skilS.mobile_tab {
+		height: 430px;
+	}
+
+	.skilS p {
+		font-size: 16.7px;
+	}
 }
